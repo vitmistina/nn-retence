@@ -1,0 +1,56 @@
+<div class="col-sm-12">
+  <h1 class=""><span class="light">Za jak</span> <span class="medium">dlouho půjdete</span> <span class="dark">do důchodu?</span></h1>
+  <h2 class="">Ročník narození klienta</h2>
+</div>
+<div class="col-sm-12 extra-light-grey-bg form-padding">
+  <div class="col-sm-3">
+    <input type="number"
+    name="yearOfBirth"
+    placeholder="1950"
+    min="1950"
+    value="1950"
+    size="4"
+    maxlength="4"
+    class="medium text-center nn-age-input"
+    ng-model="ctrl.yearOfBirth"
+    ng-change="ctrl.update()">
+  </div>
+  <div class="col-sm-9">
+    <rzslider
+           rz-slider-model="ctrl.yearOfBirth"
+           rz-slider-options="ctrl.slider.options"
+           ></rzslider>
+  </div>
+  <div class="col-sm-12 margin-top-50 gender-buttons">
+    <div class="col-sm-2 text-center">
+      <button type="button" name="button" class="active">Muž</button>
+    </div>
+    <div class="col-sm-2 text-center">
+      <button type="button" name="button">Žena bez dětí</button>
+    </div>
+    <div class="col-sm-2 text-center">
+      <button type="button" name="button">Žena s 1 dítětem</button>
+    </div>
+    <div class="col-sm-2 text-center">
+      <button type="button" name="button">Žena s 2 dětmi</button>
+    </div>
+    <div class="col-sm-2 text-center">
+      <button type="button" name="button">Žena s 3 dětmi</button>
+    </div>
+    <div class="col-sm-2 text-center">
+      <button type="button" name="button">Žena s 4 dětmi</button>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+<div class="col-sm-12 margin-top-50 font-200-p" ng-if="ctrl.estimatedYearOfRetirement">
+  <div class="col-sm-6 text-center">
+    Do důchodu půjdete v roce<br><span class="dark font-300-p">{{ ctrl.estimatedYearOfRetirement | number:0 }}</span>
+  </div>
+  <div class="col-sm-6 text-center">
+   Do důchodu půjdete za<br><span class="dark font-300-p">{{ ctrl.timeUntilRetirement | number:0 }} let</span>
+  </div>
+</div>
+<app-navigation></app-navigation>

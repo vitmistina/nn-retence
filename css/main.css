@@ -1,0 +1,115 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+   font-family: "NN-Dagny-Display";
+   src: url("/fonts/NNDagnyDisplayWebPro.eot");
+   src: url("/fonts/NNDagnyDisplayWebPro.woff") format("woff");
+   font-weight: normal;
+   font-style: normal;
+ }
+
+@font-face {
+font-family: "NN-Dagny-Text";
+src: url("/fonts/NNDagnyTextWeb.eot");
+src: url("/fonts/NNDagnyTextWeb.woff") format("woff");
+font-weight: normal;
+font-style: normal;
+}
+
+
+body {
+  font-family: "NN-Dagny-Text", Calibri, Corbel, Verdana, sans-serif;
+  color: #414141;
+  padding-top: 50px;
+}
+
+h1, h2, .pension dl dd, h3, h4, h5, h6 {
+    font-family: "NN-Dagny-Display", Calibri, Corbel, Verdana, sans-serif;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.colored {
+    color: #ea650d;
+}
+.light {
+    color: #ee7f00;
+}
+.medium {
+    color: #ea650d;
+}
+.dark {
+    color: #e64415;
+}
+
+input[name="yearOfBirth"],input[name="averageMonthlyIncome"] {
+  font-size:400%;
+  width:3em;
+  border:2px solid #ea650d;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+input[name="averageMonthlyIncome"] {
+  width:4em;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.font-200-p {
+  font-size: 200%;
+}
+
+.font-300-p {
+  font-size: 300%;
+}
+
+.extra-light-grey-bg {
+  background-color: #e5ded9;
+}
+
+.form-padding {
+  padding-top:20px;
+  padding-bottom: 20px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.rzslider .rz-bar {
+  background: #ee7f00 !important;
+}
+
+.rzslider .rz-bar.rz-selection, .rzslider .rz-pointer {
+  background: #ea650d !important;
+}
+
+.rzslider .rz-pointer.rz-active:after {
+  background-color: white !important;
+}
+
+button {
+  font-size:17px;
+  color: #ea650d;
+  background-color:white;
+  border:none;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height:38px;
+  font-family: "NN-Dagny-Display", Calibri, Corbel, Verdana, sans-serif;
+}
+
+
+button.active {
+  color: white;
+  background-color:#ea650d;
+
+}
