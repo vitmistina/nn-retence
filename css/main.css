@@ -49,14 +49,14 @@ h1, h2, .pension dl dd, h3, h4, h5, h6 {
 
 input[name="yearOfBirth"],input[name="averageMonthlyIncome"] {
   font-size:400%;
-  width:3em;
+  width:4em;
   border:2px solid #ea650d;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
 input[name="averageMonthlyIncome"] {
-  width:4em;
+  width:5em;
 }
 
 .margin-top-50 {
