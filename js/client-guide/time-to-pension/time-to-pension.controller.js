@@ -2,10 +2,10 @@
 'use strict';
 
 angular.module('clientGuide')
-.controller('timeToPensionController',timeToPensionController);
+.controller('TimeToPensionController',TimeToPensionController);
 
-timeToPensionController.$inject = ['pensionCalculatorService'];
-function timeToPensionController(pensionCalculatorService) {
+TimeToPensionController.$inject = ['pensionCalculatorService'];
+function TimeToPensionController(pensionCalculatorService) {
   var $ctrl = this;
 
   $ctrl.estimatedYearOfRetirement = null;

@@ -2,10 +2,10 @@
 'use strict';
 
 angular.module('clientGuide')
-.controller('expectedPensionController',expectedPensionController);
+.controller('ExpectedPensionController',ExpectedPensionController);
 
-expectedPensionController.$inject = ['pensionCalculatorService'];
-function expectedPensionController(pensionCalculatorService) {
+ExpectedPensionController.$inject = ['pensionCalculatorService'];
+function ExpectedPensionController(pensionCalculatorService) {
   var $ctrl = this;
   $ctrl.averageMonthlyIncome = 15000;
   $ctrl.estimatedPension = null;
