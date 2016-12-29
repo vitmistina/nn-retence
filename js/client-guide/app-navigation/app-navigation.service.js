@@ -8,37 +8,68 @@ AppNavigationService.$inject = [];
 function AppNavigationService() {
   var service = this;
   service.stateList = [
-    'gift',
-    'time-to-pension',
-    'expected-pension',
-    'example-of-pension-savings',
-    'investment-options',
-    'you-know-unit-trusts',
-    'do-not-underestimate-investment-risk',
-    'lets-invest',
-    'client-maturing-policy-amount',
-    'life-insurance',
-    'life-insurance-benefits',
-    'next-steps',
+    {
+      name: 'gift',
+      prettyName: 'Dárek pro klienty'
+    },
+    {
+      name: 'time-to-pension',
+      prettyName: 'Doba do důchodu'
+    },
+    {
+      name: 'expected-pension',
+      prettyName: 'Očekávaná výše penze'
+    },
+    {
+      name: 'example-of-pension-savings',
+      prettyName: 'Příklad spoření na penzi'
+    },
+    {
+      name: 'investment-options',
+      prettyName: 'Možnosti investic'
+    },
+    {
+      name: 'you-know-unit-trusts',
+      prettyName: 'Podílové fondy'
+    },
+    {
+      name: 'work-with-investment-risk',
+      prettyName: 'Pracujte s investičním rizikem'
+    },
+    {
+      name: 'client-maturing-policy-amount',
+      prettyName: 'Kolik vám nesu'
+    },
+    {
+      name: 'life-insurance',
+      prettyName: 'Myslete na sebe a svou rodinu'
+    },
+    {
+      name: 'life-insurance-benefits',
+      prettyName: 'Výhody NN Život'
+    },
+    {
+      name: 'next-steps',
+      prettyName: 'Další kroky'
+    },
   ];
 
   service.getStateList = function () {
     return service.stateList;
   };
 
-  service.getNextState = function (stateName) {
+  service.getNextStateName = function (stateName) {
     var nextState = null;
-    if (service.stateList.indexOf(stateName) != -1 && (service.stateList.indexOf(stateName)+1) < service.stateList.length) {
-      nextState = service.stateList[service.stateList.indexOf(stateName)+1];
+    if (service.stateList.map(function(e) { return e.name; }).indexOf(stateName) != -1 && (service.stateList.map(function(e) { return e.name; }).indexOf(stateName)+1) < service.stateList.length) {
+      nextState = service.stateList[service.stateList.map(function(e) { return e.name; }).indexOf(stateName)+1].name;
     }
     return nextState;
   }
 
-  service.getPreviousState = function (stateName) {
-
+  service.getPreviousStateName = function (stateName) {
     var previousState = null;
-    if (service.stateList.indexOf(stateName) != -1 && service.stateList.indexOf(stateName) > 0) {
-      previousState = service.stateList[service.stateList.indexOf(stateName)-1];
+    if (service.stateList.map(function(e) { return e.name; }).indexOf(stateName) != -1 && service.stateList.map(function(e) { return e.name; }).indexOf(stateName) > 0) {
+      previousState = service.stateList[service.stateList.map(function(e) { return e.name; }).indexOf(stateName)-1].name;
     }
     return previousState;
   }

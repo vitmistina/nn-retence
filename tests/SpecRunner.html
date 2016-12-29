@@ -11,26 +11,48 @@
   <script src="lib/jasmine-2.5.2/jasmine-html.js"></script>
   <script src="lib/jasmine-2.5.2/boot.js"></script>
 
-  <!-- include source files here... -->
+  <!-- Application Libraries -->
   <script src="/js/vendor/jquery-1.11.2.min.js"></script>
-  <script src="/js/vendor/bootstrap.min.js"></script>
   <script src="/js/vendor/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-mocks.js"></script>
   <script src="/js/vendor/angular-ui-router.min.js"></script>
+  <script src="/js/vendor/ui-bootstrap-2.3.2.min.js"></script>
   <script src="/js/vendor/angularjs-slider/dist/rzslider.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.8/angular-locale_cs-cz.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
 
   <!-- Main application module -->
   <script src="/js/client-guide/client-guide.module.js"></script>
+
+  <!-- Routes -->
   <script src="/js/client-guide/client-guide.routes.js"></script>
-  <script src="/js/client-guide/app-navigation/app-flow-navigation.component.js"></script>
-  <script src="/js/client-guide/pension-calculator.service.js"></script>
-  <script src="/js/client-guide/time-to-pension/time-to-pension.controller.js"></script>
-  <script src="/js/client-guide/expected-pension/expected-pension.controller.js"></script>
+
+  <!-- App Navigation -->
   <script src="/js/client-guide/app-navigation/app-navigation.service.js"></script>
+  <script src="/js/client-guide/app-navigation/app-flow-navigation.component.js"></script>
+  <script src="/js/client-guide/app-navigation/app-flow-navigation-component.controller.js"></script>
+  <script src="/js/client-guide/app-navigation/app-menu-navigation.component.js"></script>
+  <script src="/js/client-guide/app-navigation/app-menu-navigation-component.controller.js"></script>
+
+  <!-- Pension Calculator Service -->
+  <script src="/js/client-guide/pension-calculator.service.js"></script>
+
+  <!-- Time to Pension controller -->
+  <script src="/js/client-guide/time-to-pension/time-to-pension.controller.js"></script>
+
+  <!-- Expected Pension controller -->
+  <script src="/js/client-guide/expected-pension/expected-pension.controller.js"></script>
+
+  <!-- Example of pension savigns controller -->
+  <script src="/js/client-guide/example-of-pension-savings/example-of-pension-savings.controller.js"></script>
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-mocks.js"></script>
 
   <!-- Spec files here -->
   <script src="spec/app-navigation.service.spec.js"></script>
+  <script src="spec/pension-calculator.service.spec.js"></script>
 
 </head>
 

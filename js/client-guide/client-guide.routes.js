@@ -41,7 +41,7 @@ function routeConfig ($stateProvider,$urlRouterProvider) {
       url: '/you-know-unit-trusts',
       template: '<h1>Podílové fondy už přeci znáte!</h1>'
     })
-    .state('do-not-underestimate-investment-risk', {
+    .state('work-with-investment-risk', {
       url: '/do-not-underestimate-investment-risk',
       template: '<h1>Nepodceňte investiční riziko</h1>'
     })

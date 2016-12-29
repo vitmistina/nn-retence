@@ -9,19 +9,19 @@ function AppFlowNavigationComponentController($state,AppNavigationService) {
   var ctrl = this;
 
   ctrl.goToNextState = function () {
-    $state.go(AppNavigationService.getNextState($state.current.name));
+    $state.go(AppNavigationService.getNextStateName($state.current.name));
   };
 
   ctrl.getNextState = function () {
-    return AppNavigationService.getNextState($state.current.name);
+    return AppNavigationService.getNextStateName($state.current.name);
   };
 
   ctrl.goToPreviousState = function () {
-    $state.go(AppNavigationService.getPreviousState($state.current.name));
+    $state.go(AppNavigationService.getPreviousStateName($state.current.name));
   };
 
   ctrl.getPreviousState = function () {
-    return AppNavigationService.getPreviousState($state.current.name);
+    return AppNavigationService.getPreviousStateName($state.current.name);
   };
 }
 

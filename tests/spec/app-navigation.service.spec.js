@@ -10,43 +10,61 @@ describe('app-navigation', function () {
     });
 
     AppNavigationService.stateList = [
-      'gift',
-      'time-to-pension',
-      'expected-pension'
+      {
+        name: 'gift',
+        prettyName: 'Dárek pro klienty'
+      },
+      {
+        name: 'time-to-pension',
+        prettyName: 'Doba do důchodu'
+      },
+      {
+        name: 'expected-pension',
+        prettyName: 'Očekávaná výše penze'
+      }
     ];
-    
+
   });
 
   it('should return categories list', function() {
     expect(AppNavigationService.getStateList()).toEqual([
-      'gift',
-      'time-to-pension',
-      'expected-pension'
+      {
+        name: 'gift',
+        prettyName: 'Dárek pro klienty'
+      },
+      {
+        name: 'time-to-pension',
+        prettyName: 'Doba do důchodu'
+      },
+      {
+        name: 'expected-pension',
+        prettyName: 'Očekávaná výše penze'
+      }
     ]);
     });
 
   it('should return expected-pension as next after time-to-pension', function() {
-    expect(AppNavigationService.getNextState('time-to-pension')).toEqual('expected-pension');
+    expect(AppNavigationService.getNextStateName('time-to-pension')).toEqual('expected-pension');
     });
 
   it('should return null as next with unknown State', function() {
-    expect(AppNavigationService.getNextState('some non-existing state')).toEqual(null);
+    expect(AppNavigationService.getNextStateName('some non-existing state')).toEqual(null);
     });
 
   it('should return null as next after expected-pension', function() {
-      expect(AppNavigationService.getNextState('expected-pension')).toEqual(null);
+      expect(AppNavigationService.getNextStateName('expected-pension')).toEqual(null);
       });
 
   it('should return gift as previous before time-to-pension', function() {
-    expect(AppNavigationService.getPreviousState('time-to-pension')).toEqual('gift');
+    expect(AppNavigationService.getPreviousStateName('time-to-pension')).toEqual('gift');
     });
 
   it('should return null as previous with unknown State', function() {
-    expect(AppNavigationService.getPreviousState('some non-existing state')).toEqual(null);
+    expect(AppNavigationService.getPreviousStateName('some non-existing state')).toEqual(null);
     });
 
   it('should return null as previous before gift', function() {
-      expect(AppNavigationService.getPreviousState('gift')).toEqual(null);
+      expect(AppNavigationService.getPreviousStateName('gift')).toEqual(null);
       });
 
 });

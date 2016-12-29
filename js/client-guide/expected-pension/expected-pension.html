@@ -18,7 +18,26 @@
   <div class="col-sm-9">
     <rzslider
            rz-slider-model="ctrl.averageMonthlyIncome"
-           rz-slider-options="ctrl.slider.options"
+           rz-slider-options="ctrl.incomeSlider.options"
+           ></rzslider>
+  </div>
+
+  <div class="col-sm-3">
+    <input type="number"
+    name="yearsOfInsurance"
+    placeholder="40"
+    min="20"
+    value="40"
+    size="2"
+    maxlength="2"
+    class="medium text-center"
+    ng-model="ctrl.yearsOfInsurance"
+    ng-change="ctrl.update()">
+  </div>
+  <div class="col-sm-9">
+    <rzslider
+           rz-slider-model="ctrl.yearsOfInsurance"
+           rz-slider-options="ctrl.yearsOfInsuranceSlider.options"
            ></rzslider>
   </div>
 

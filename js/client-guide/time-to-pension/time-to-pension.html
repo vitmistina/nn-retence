@@ -6,9 +6,9 @@
   <div class="col-sm-3">
     <input type="number"
     name="yearOfBirth"
-    placeholder="1950"
-    min="1950"
-    value="1950"
+    placeholder="1951"
+    min="1951"
+    value="1951"
     size="4"
     maxlength="4"
     class="medium text-center nn-age-input"
@@ -21,35 +21,34 @@
            rz-slider-options="ctrl.slider.options"
            ></rzslider>
   </div>
-  <div class="col-sm-12 margin-top-50 gender-buttons">
-    <div class="col-sm-2 text-center">
-      <button type="button" name="button" class="active">Muž</button>
-    </div>
-    <div class="col-sm-2 text-center">
-      <button type="button" name="button">Žena bez dětí</button>
-    </div>
-    <div class="col-sm-2 text-center">
-      <button type="button" name="button">Žena s 1 dítětem</button>
-    </div>
-    <div class="col-sm-2 text-center">
-      <button type="button" name="button">Žena s 2 dětmi</button>
-    </div>
-    <div class="col-sm-2 text-center">
-      <button type="button" name="button">Žena s 3 dětmi</button>
-    </div>
-    <div class="col-sm-2 text-center">
-      <button type="button" name="button">Žena s 4 dětmi</button>
-    </div>
+
+  <div class="col-sm-12">
+    <form name="myForm">
+      <select name="" ng-model="ctrl.monthOfBirth" ng-options="key as value for (key,value) in ctrl.monthsList" ng-change="ctrl.update()">
+      </select>
+    </form>
   </div>
+
+  <div class="col-sm-12">
+    <form name="myForm">
+      <select name="" ng-model="ctrl.gender" ng-options="key as value for (key,value) in ctrl.genderList" ng-change="ctrl.update()">
+      </select>
+    </form>
+  </div>
+
 
 </div>
 
 <hr>
-<div class="col-sm-12 margin-top-50 font-200-p" ng-if="ctrl.estimatedYearOfRetirement">
+<div class="col-sm-12 margin-top-50 font-200-p" ng-if="(ctrl.timeUntilRetirement.decimalValue > 0)">
   <div class="col-sm-6 text-center">
-    Do důchodu půjdete v roce<br><span class="dark font-300-p">{{ ctrl.estimatedYearOfRetirement | number:0 }}</span>
+    Do důchodu půjdete <br><span class="dark font-300-p">{{ ctrl.estimatedYearOfRetirement.month }}<br>{{ ctrl.estimatedYearOfRetirement.year }}</span>
   </div>
   <div class="col-sm-6 text-center">
-   Do důchodu půjdete za<br><span class="dark font-300-p">{{ ctrl.timeUntilRetirement | number:0 }} let</span>
+   Do důchodu půjdete za<br><span class="dark font-300-p">{{ ctrl.timeUntilRetirement.year }} let<br>{{ ctrl.timeUntilRetirement.month }} měsíců</span>
   </div>
+</div>
+
+<div class="col-sm-12 margin-top-50 font-200-p text-center" ng-if="(ctrl.timeUntilRetirement.decimalValue <= 0)">
+  Již máte nárok jít do důchodu
 </div>
