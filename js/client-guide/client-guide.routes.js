@@ -35,35 +35,31 @@ function routeConfig ($stateProvider,$urlRouterProvider) {
     })
     .state('investment-options', {
       url: '/investment-options',
-      template: '<h1>Jaké máte možnosti zhodnocení prostředků?</h1>'
+      templateUrl: 'js/client-guide/investment-options/investment-options.html'
     })
     .state('you-know-unit-trusts', {
       url: '/you-know-unit-trusts',
-      template: '<h1>Podílové fondy už přeci znáte!</h1>'
+      templateUrl: 'js/client-guide/you-know-unit-trusts/you-know-unit-trusts.html'
     })
     .state('work-with-investment-risk', {
-      url: '/do-not-underestimate-investment-risk',
-      template: '<h1>Nepodceňte investiční riziko</h1>'
+      url: '/work-with-investment-risk',
+      templateUrl: 'js/client-guide/work-with-investment-risk/work-with-investment-risk.html'
     })
     .state('lets-invest', {
       url: '/lets-invest',
-      template: '<h1>Souhlasíte, že dobré peníze rozmnožit?</h1><p class="quote">Investice je proces, při kterém se dnes vzdáte peněz s očekáváním, že díky v budoucnu obdržíte větší než investovanou částku.</p><p class="quote-author">Warren Buffet</p>'
+      templateUrl: 'js/client-guide/lets-invest/lets-invest.html'
     })
     .state('client-maturing-policy-amount', {
       url: '/client-maturing-policy-amount',
-      template: '<h1>Kolik vám vlastně nesu?</h1>'
-    })
-    .state('next-steps', {
-      url: '/next-steps',
-      template: '<h1>Co navrhujeme jako další kroky?</h1>'
+      templateUrl: 'js/client-guide/client-maturing-policy-amount/client-maturing-policy-amount.html'
     })
     .state('life-insurance', {
       url: '/life-insurance',
-      template: '<h1>Nesu vám ještě 1 500 000 Kč navíc</h1>'
+      templateUrl: 'js/client-guide/life-insurance/life-insurance.html'
     })
-    .state('life-insurance-benefits', {
-      url: '/life-insurance-benefits',
-      template: '<h1>Jaké další výhody má NN Život?</h1>'
+    .state('next-steps', {
+      url: '/next-steps',
+      templateUrl: 'js/client-guide/next-steps/next-steps.html'
     });
 
   $urlRouterProvider.otherwise('/gift');

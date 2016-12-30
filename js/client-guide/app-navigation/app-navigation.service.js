@@ -37,16 +37,16 @@ function AppNavigationService() {
       prettyName: 'Pracujte s investičním rizikem'
     },
     {
+      name: 'lets-invest',
+      prettyName: 'Pojďte investovat'
+    },
+    {
       name: 'client-maturing-policy-amount',
       prettyName: 'Kolik vám nesu'
     },
     {
       name: 'life-insurance',
       prettyName: 'Myslete na sebe a svou rodinu'
-    },
-    {
-      name: 'life-insurance-benefits',
-      prettyName: 'Výhody NN Život'
     },
     {
       name: 'next-steps',

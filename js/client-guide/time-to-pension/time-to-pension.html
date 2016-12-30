@@ -1,9 +1,9 @@
 <div class="col-sm-12">
   <h1 class=""><span class="light">Za jak</span> <span class="medium">dlouho půjdete</span> <span class="dark">do důchodu?</span></h1>
-  <h2 class="">Ročník narození klienta</h2>
 </div>
 <div class="col-sm-12 extra-light-grey-bg form-padding">
   <div class="col-sm-3">
+    <p class="medium display form-label">Ročník narození klienta</p>
     <input type="number"
     name="yearOfBirth"
     placeholder="1951"
@@ -24,7 +24,8 @@
 
   <div class="col-sm-12">
     <form name="myForm">
-      <select name="" ng-model="ctrl.monthOfBirth" ng-options="key as value for (key,value) in ctrl.monthsList" ng-change="ctrl.update()">
+      <label for="monthOfBirthSelect" class="medium display form-label">Měsíc narození klienta</label>
+      <select name="monthOfBirthSelect" ng-model="ctrl.monthOfBirth" ng-options="key as value for (key,value) in ctrl.monthsList" ng-change="ctrl.update()">
       </select>
     </form>
   </div>
