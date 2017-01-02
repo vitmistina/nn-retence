@@ -1,9 +1,12 @@
 <div class="col-sm-12">
   <h1 class=""><span class="light">Za jak</span> <span class="medium">dlouho půjdete</span> <span class="dark">do důchodu?</span></h1>
 </div>
-<div class="col-sm-12 extra-light-grey-bg form-padding">
+<div class="col-sm-12 extra-light-grey-bg form-padding time-to-pension-form">
+  <div class="col-sm-12">
+    <p class="medium display form-label">Ročník narození</p>
+  </div>
   <div class="col-sm-3">
-    <p class="medium display form-label">Ročník narození klienta</p>
+
     <input type="number"
     name="yearOfBirth"
     placeholder="1951"
@@ -22,31 +25,28 @@
            ></rzslider>
   </div>
 
-  <div class="col-sm-12">
+  <div class="col-sm-12 form-line">
     <form name="myForm">
-      <label for="monthOfBirthSelect" class="medium display form-label">Měsíc narození klienta</label>
+      <label for="monthOfBirthSelect" class="medium display form-label">Měsíc narození</label><br>
       <select name="monthOfBirthSelect" ng-model="ctrl.monthOfBirth" ng-options="key as value for (key,value) in ctrl.monthsList" ng-change="ctrl.update()">
       </select>
     </form>
   </div>
 
-  <div class="col-sm-12">
+  <div class="col-sm-12 form-line">
     <form name="myForm">
-      <select name="" ng-model="ctrl.gender" ng-options="key as value for (key,value) in ctrl.genderList" ng-change="ctrl.update()">
+      <label for="genderSelect" class="medium display form-label">Pohlaví a počet dětí</label><br>
+      <select name="genderSelect" ng-model="ctrl.gender" ng-options="key as value for (key,value) in ctrl.genderList" ng-change="ctrl.update()">
       </select>
     </form>
   </div>
-
-
 </div>
-
-<hr>
-<div class="col-sm-12 margin-top-50 font-200-p" ng-if="(ctrl.timeUntilRetirement.decimalValue > 0)">
+<div class="col-sm-12 age-calculation-results" ng-if="(ctrl.timeUntilRetirement.decimalValue > 0)">
   <div class="col-sm-6 text-center">
-    Do důchodu půjdete <br><span class="dark font-300-p">{{ ctrl.estimatedYearOfRetirement.month }}<br>{{ ctrl.estimatedYearOfRetirement.year }}</span>
+    Do důchodu půjdete v<br><span class="dark age-calculation-result">{{ ctrl.estimatedYearOfRetirement.month }} {{ ctrl.estimatedYearOfRetirement.year }}</span>
   </div>
   <div class="col-sm-6 text-center">
-   Do důchodu půjdete za<br><span class="dark font-300-p">{{ ctrl.timeUntilRetirement.year }} let<br>{{ ctrl.timeUntilRetirement.month }} měsíců</span>
+   Do důchodu půjdete za<br><span class="dark age-calculation-result">{{ ctrl.timeUntilRetirement.year }} let {{ ctrl.timeUntilRetirement.month }} měsíců</span>
   </div>
 </div>
 

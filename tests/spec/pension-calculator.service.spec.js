@@ -17,11 +17,11 @@ describe('pension calculator', function () {
   });
 
   it('should return 2009 january for 1951 september woman with 3',function () {
-    expect(pensionCalculatorService.getEstimatedYearOfRetirement(1951,8,'woman-3-kids')).toEqual({year:2009,month:"leden",decimalValue:2009});
+    expect(pensionCalculatorService.getEstimatedYearOfRetirement(1951,8,'woman-3-kids')).toEqual({year:2009,month:"lednu",decimalValue:2009});
   });
 
   it('should predict time until retirement',function () {
-    expect(pensionCalculatorService.getTimeUntilRetirement(1963,2,'woman-2-kids')).toEqual({ year: 9, month: 11, decimalValue: 9.916666666666819 });
+    expect(pensionCalculatorService.getTimeUntilRetirement(1963,2,'woman-2-kids')).toEqual({ year: 9, month: 10, decimalValue: 9.833333333333485 });
   });
 
 

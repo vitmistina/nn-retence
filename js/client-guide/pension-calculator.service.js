@@ -44,18 +44,18 @@ function pensionCalculatorService() {
 
   service.decodeMonths = function (monthInt) {
     var lookupTableObject = {
-      0: "leden",
-      1: "únor",
-      2: "březen",
-      3: "duben",
-      4: "květen",
-      5: "červen",
-      6: "červenec",
-      7: "srpen",
+      0: "lednu",
+      1: "únoru",
+      2: "březnu",
+      3: "dubnu",
+      4: "květnu",
+      5: "červnu",
+      6: "červenci",
+      7: "srpnu",
       8: "září",
-      9: "říjen",
-      10: "listopad",
-      11: "prosinec"
+      9: "říjnu",
+      10: "listopadu",
+      11: "prosinci"
     }
     return lookupTableObject[monthInt];
   };

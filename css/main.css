@@ -58,8 +58,8 @@ h1, h2, .pension dl dd, h3, h4, h5, h6 {
   border-radius: 5px;
 }
 
-input[name="averageMonthlyIncome"] {
-  width:5em;
+input[name="averageMonthlyIncome"], {
+  width:200px;
 }
 
 .margin-top-50 {
@@ -192,6 +192,42 @@ button.active {
   max-width:500px;
 }
 
+
+select {
+  width:300px;
+  background:white;
+  border:0px solid #ea650d;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.form-label {
+  font-size:16px;
+  margin-bottom:10px;
+}
+
+label.form-label {
+  font-weight:normal;
+  margin-top:31px;
+}
+
+.age-calculation-results {
+  margin-top:15px;
+  font-size:200%;
+}
+.age-calculation-result{
+  font-size:40px;
+}
+
+.state-flow-nav {
+  margin-top:50px;
+}
+
+.form-line+.form-line{
+  margin-top:31px;
+}
+
+
 @media (max-width: 768px) {
       .col-sm-6.text-right, .col-sm-6.text-left {
               text-align: center;
@@ -207,7 +243,7 @@ button.active {
        h1 {
          font-size: 24px;
        }
-       .nn-age-input {
+       .nn-age-input, input[name="averageMonthlyIncome"] {
          width:100%;
          font-size: 16px;
          text-align: left;
@@ -232,9 +268,37 @@ button.active {
        select::before {
          content: ">";
        }
-    }
+       label[for="genderSelect"] {
+         margin-top:20px;
+       }
+       .age-calculation-results {
+         font-size:120%;
+       }
+       .age-calculation-results .text-center {
+         text-align:left;
+       }
+       .age-calculation-result{
+         font-size:32px;
+       }
+       .state-flow-nav {
+         margin-top:20px;
+       }
 
-.form-label {
-  font-size:16px;
-  margin-bottom:10px;
-}
+       .quote-box {
+         width: 100%;
+         background-color: rgba(255,255,255,0.9);
+
+       }
+       .quote-image {
+         min-height: 550px;
+         padding-top: 210px;
+         background-position-x: -200px;
+
+       }
+       label.form-label {
+         margin-top:0px;
+       }
+       .form-line+.form-line {
+         margin-top:14px;
+       }
+    }
