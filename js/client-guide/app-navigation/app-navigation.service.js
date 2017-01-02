@@ -8,10 +8,10 @@ AppNavigationService.$inject = [];
 function AppNavigationService() {
   var service = this;
   service.stateList = [
-    {
-      name: 'gift',
-      prettyName: 'Dárek pro klienty'
-    },
+    // {
+    //   name: 'gift',
+    //   prettyName: 'Dárek pro klienty'
+    // },
     {
       name: 'time-to-pension',
       prettyName: 'Doba do důchodu'
@@ -43,6 +43,10 @@ function AppNavigationService() {
     {
       name: 'client-maturing-policy-amount',
       prettyName: 'Kolik vám nesu'
+    },
+    {
+      name: 'life-risk-insurance-status',
+      prettyName: 'Končí krytí rizik'
     },
     {
       name: 'life-insurance',

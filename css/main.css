@@ -227,6 +227,31 @@ label.form-label {
   margin-top:31px;
 }
 
+.info-box {
+  margin-top: 31px;
+  border:2px solid #ea650d;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size:200%;
+
+}
+
+.info-box p {
+  margin: 20px 20px;
+}
+
+.big-number {
+  text-align:center;
+  font-size:300%;
+}
+
+.info-source {
+  font-size:50%;
+  color: #414141;
+}
+
+
+
 
 @media (max-width: 768px) {
       .col-sm-6.text-right, .col-sm-6.text-left {

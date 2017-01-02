@@ -60,6 +60,10 @@ function routeConfig ($stateProvider,$urlRouterProvider) {
     .state('next-steps', {
       url: '/next-steps',
       templateUrl: 'js/client-guide/next-steps/next-steps.html'
+    })
+    .state('life-risk-insurance-status', {
+      url: '/life-risk-insurance-status',
+      templateUrl: 'js/client-guide/life-risk-insurance-status/life-risk-insurance-status.html'
     });
 
   $urlRouterProvider.otherwise('/gift');

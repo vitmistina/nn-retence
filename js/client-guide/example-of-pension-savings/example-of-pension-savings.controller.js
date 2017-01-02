@@ -12,12 +12,13 @@ function ExampleOfPensionSavingsController() {
 
 
   ctrl.bar = {
-    labels: ['Čistá mzda před důchodem','Starobní důchod','S čerpáním investice'],
+    labels: ['Před důchodem','Starobní důchod','S investicí'],
     series: ['Čistá mzda před důchodem','Starobní důchod','Výplata naspořených prostředků'],
     data: [
+            [19295,0,0],
             [0,12385,12385],
-            [0,0,5219],
-            [19295,0,0]
+            [0,0,4133]
+
           ],
     colors: [
       {
@@ -28,14 +29,6 @@ function ExampleOfPensionSavingsController() {
         pointBorderColor: '#fff',
         pointHoverBorderColor: "#ea650d"
       },
-      {
-        backgroundColor: "#c8cd2e",
-        pointBackgroundColor: "#c8cd2e",
-        pointHoverBackgroundColor: "#c8cd2e",
-        borderColor: "#c8cd2e",
-        pointBorderColor: '#fff',
-        pointHoverBorderColor: "#c8cd2e"
-      },
 
       {
         backgroundColor: "#ee7f00",
@@ -44,6 +37,14 @@ function ExampleOfPensionSavingsController() {
         borderColor: "#ee7f00",
         pointBorderColor: '#fff',
         pointHoverBorderColor: "#ee7f00"
+      },
+      {
+        backgroundColor: "#c8cd2e",
+        pointBackgroundColor: "#c8cd2e",
+        pointHoverBackgroundColor: "#c8cd2e",
+        borderColor: "#c8cd2e",
+        pointBorderColor: '#fff',
+        pointHoverBorderColor: "#c8cd2e"
       }
 
     ],
@@ -54,7 +55,7 @@ function ExampleOfPensionSavingsController() {
                   }],
                   xAxes: [{
                     stacked: true,
-                    display:false
+                    // display:false
                   }]
                 }
               }
