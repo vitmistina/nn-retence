@@ -6,16 +6,16 @@
 
 @font-face {
    font-family: "NN-Dagny-Display";
-   src: url("/fonts/NNDagnyDisplayWebPro.eot");
-   src: url("/fonts/NNDagnyDisplayWebPro.woff") format("woff");
+   src: url("../fonts/NNDagnyDisplayWebPro.eot");
+   src: url("../fonts/NNDagnyDisplayWebPro.woff") format("woff");
    font-weight: normal;
    font-style: normal;
  }
 
 @font-face {
 font-family: "NN-Dagny-Text";
-src: url("/fonts/NNDagnyTextWeb.eot");
-src: url("/fonts/NNDagnyTextWeb.woff") format("woff");
+src: url("../fonts/NNDagnyTextWeb.eot");
+src: url("../fonts/NNDagnyTextWeb.woff") format("woff");
 font-weight: normal;
 font-style: normal;
 }
