@@ -7,6 +7,7 @@ angular.module('clientGuide')
 /**
  * Configures the routes and views
  */
+ 
 routeConfig.$inject = ['$stateProvider','$urlRouterProvider'];
 function routeConfig ($stateProvider,$urlRouterProvider) {
   // Routes
