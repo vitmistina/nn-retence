@@ -241,8 +241,7 @@ label.form-label {
 }
 
 .big-number {
-  text-align:center;
-  font-size:300%;
+  font-size:160%;
 }
 
 .info-source {
@@ -250,7 +249,64 @@ label.form-label {
   color: #414141;
 }
 
+img {
+  max-width:100%;
+}
 
+.investment-options div {
+  padding-top:31px;
+}
+
+.work-with-investment-risk div {
+  padding-top: 31px;
+}
+
+.work-with-investment-risk h2 {
+  /*min-height: 500px;*/
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h2[count-up] {
+  font-size:800%;
+  /*color:#96b439;*/
+}
+
+.big-list {
+  font-size:200%;
+}
+
+.checkbox-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.checkbox-list input[type=checkbox] {
+  display:none;
+}
+
+.checkbox-list input[type=checkbox] + label
+{
+  position:relative;
+  top:16px;
+  background-image: url('../img/unchecked.png');
+  background-size:cover;
+  height: 59px;
+  width: 54px;
+  display:inline-block;
+  padding: 0 0 0 0px;
+}
+.checkbox-list input[type=checkbox]:checked + label
+{
+  background-image: url('../img/checked.png');
+  background-size:cover;
+  height: 59px;
+  width: 54px;
+  display:inline-block;
+  padding: 0 0 0 0px;
+}
 
 
 @media (max-width: 768px) {
@@ -267,6 +323,9 @@ label.form-label {
        }
        h1 {
          font-size: 24px;
+       }
+       h2 {
+         font-size: 20px;
        }
        .nn-age-input, input[name="averageMonthlyIncome"] {
          width:100%;
@@ -325,5 +384,15 @@ label.form-label {
        }
        .form-line+.form-line {
          margin-top:14px;
+       }
+       .big-number {
+         text-align:center;
+         font-size:250%;
+       }
+       h2[count-up] {
+         font-size:400%;
+       }
+       .big-list {
+         font-size:120%;
        }
     }
