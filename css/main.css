@@ -33,7 +33,7 @@ h1, h2, .pension dl dd, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-.display {
+.display, strong {
   font-family: "NN-Dagny-Display", Calibri, Corbel, Verdana, sans-serif;
 }
 
