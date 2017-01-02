@@ -66,6 +66,6 @@ function routeConfig ($stateProvider,$urlRouterProvider) {
       templateUrl: 'js/client-guide/life-risk-insurance-status/life-risk-insurance-status.html'
     });
 
-  $urlRouterProvider.otherwise('/gift');
+  $urlRouterProvider.otherwise('/time-to-pension');
 }
 })();
