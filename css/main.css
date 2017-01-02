@@ -125,7 +125,7 @@ button.active {
   width:100%;
   min-height:600px;
   padding-top:200px;
-  background-image:url(/img/lets-invest-buffett-with-obama.jpg);
+  background-image:url(../img/lets-invest-buffett-with-obama.jpg);
   background-repeat: no-repeat;
   background-size:cover;
   -webkit-border-radius: 5px;
