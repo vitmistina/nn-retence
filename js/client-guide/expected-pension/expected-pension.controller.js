@@ -7,7 +7,7 @@ angular.module('clientGuide')
 ExpectedPensionController.$inject = ['pensionCalculatorService'];
 function ExpectedPensionController(pensionCalculatorService) {
   var $ctrl = this;
-  $ctrl.averageMonthlyIncome = 15000;
+  $ctrl.averageMonthlyIncome = 25000;
   $ctrl.estimatedPension = null;
   $ctrl.incomeLoweredBy = 1000;
   $ctrl.yearsOfInsurance = 40;
