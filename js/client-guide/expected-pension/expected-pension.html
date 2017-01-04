@@ -11,7 +11,11 @@
       name="averageMonthlyIncome"
       placeholder="15000"
       min="10000"
+      ng-min="10000"
       value="15000"
+      max="45000"
+      ng-max="45000"
+      step="5000"
       size="5"
       maxlength="5"
       class="medium text-center input-with-currency"
@@ -61,4 +65,8 @@
   <div class="col-sm-6 text-center">
     Čistý příjem vám klesne o<br><span class="dark age-calculation-result">{{ ctrl.incomeLoweredBy | number:1 }} %</span>
   </div>
+</div>
+
+<div class="col-sm-12">
+  <p class="info-source">Přibližný výpočet státního starobního důchodu. Zdroj: ČSSZ, <a href="http://www.cssz.cz/cz/duchodove-pojisteni/duchodova-kalkulacka/kalkulacka-pro-orientacni-vypocet-starobniho-duchodu.htm">http://www.cssz.cz/cz/duchodove-pojisteni/duchodova-kalkulacka/kalkulacka-pro-orientacni-vypocet-starobniho-duchodu.htm</a></p>
 </div>
