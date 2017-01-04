@@ -13,6 +13,10 @@ function AppNavigationService() {
     //   prettyName: 'Dárek pro klienty'
     // },
     {
+      name: 'client-setup',
+      prettyName: 'Nastavení klienta'
+    },
+    {
       name: 'time-to-pension',
       prettyName: 'Doba do důchodu'
     },

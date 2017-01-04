@@ -1,0 +1,28 @@
+<h1><span class="light">Nastavení</span> <span class="medium">klienta</span></h1>
+<div class="col-sm-12 extra-light-grey-bg form-padding expected-pension-form">
+  <div class="clearfix form-line">
+    <div class="col-sm-12">
+      <p class="medium display form-label">Jméno klienta</p>
+    </div>
+    <div class="col-sm-12">
+      <input type="text"
+      class=""
+      ng-model="ctrl.client.name"
+      ng-change="ctrl.update()">
+    </div>
+  </div>
+  <div class="clearfix form-line">
+    <div class="col-sm-12">
+      <p class="medium display form-label">Částka na dožívající smlouvě</p>
+    </div>
+    <div class="col-sm-12">
+      <input type="number"
+      class=""
+      ng-model="ctrl.client.savedAmount"
+      ng-change="ctrl.update()">Kč
+    </div>
+  </div>
+</div>
+<div class="col-sm-12" ng-if="ctrl.client.savedAmount && ctrl.client.name">
+  <h2>Uložil jsem částku {{ ctrl.client.savedAmount | currency:"Kč":0 }} pro klienta jménem {{ ctrl.client.name }}</h2>
+</div>

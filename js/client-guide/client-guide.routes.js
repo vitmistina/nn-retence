@@ -7,7 +7,7 @@ angular.module('clientGuide')
 /**
  * Configures the routes and views
  */
- 
+
 routeConfig.$inject = ['$stateProvider','$urlRouterProvider'];
 function routeConfig ($stateProvider,$urlRouterProvider) {
   // Routes
@@ -52,7 +52,9 @@ function routeConfig ($stateProvider,$urlRouterProvider) {
     })
     .state('client-maturing-policy-amount', {
       url: '/client-maturing-policy-amount',
-      templateUrl: 'js/client-guide/client-maturing-policy-amount/client-maturing-policy-amount.html'
+      templateUrl: 'js/client-guide/client-maturing-policy-amount/client-maturing-policy-amount.html',
+      controller: 'ClientMaturingPolicyAmountController',
+      controllerAs: 'ctrl'
     })
     .state('life-insurance', {
       url: '/life-insurance',
@@ -65,8 +67,14 @@ function routeConfig ($stateProvider,$urlRouterProvider) {
     .state('life-risk-insurance-status', {
       url: '/life-risk-insurance-status',
       templateUrl: 'js/client-guide/life-risk-insurance-status/life-risk-insurance-status.html'
+    })
+    .state('client-setup', {
+      url: '/client-setup',
+      templateUrl: 'js/client-guide/client-setup/client-setup.html',
+      controller: 'ClientSetupController',
+      controllerAs: 'ctrl'
     });
 
-  $urlRouterProvider.otherwise('/time-to-pension');
+  $urlRouterProvider.otherwise('/client-setup');
 }
 })();
