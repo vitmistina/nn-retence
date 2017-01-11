@@ -14,4 +14,4 @@ bower install
 grunt build
 ```
 
-Resulting code for deployment should be in dist folder
+Resulting code for deployment should be in the "dist" folder
