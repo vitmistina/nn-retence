@@ -17,7 +17,7 @@ function ExampleOfPensionSavingsController() {
     data: [
             [19295,0,0],
             [0,12385,12385],
-            [0,0,4133]
+            [0,0,5200]
 
           ],
     colors: [
