@@ -8,8 +8,10 @@ You need
 * bower
 
 Then
-    npm install
-    bower install
-    grunt build
+```
+npm install
+bower install
+grunt build
+```
 
 Resulting code for deployment should be in dist folder
