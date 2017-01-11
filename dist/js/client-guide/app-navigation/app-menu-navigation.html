@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="text-center app-name col-sm-12">
+      Průvodce maturitou smlouvy
+    </div>
+    <div class="navbar-header">
+
+
+      <div class="float-right">
+        <div class="btn-group" uib-dropdown>
+          <button id="single-button" type="button" class="navbar-toggle collapsed" uib-dropdown-toggle ng-disabled="disabled">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="dropdown-menu" uib-dropdown-menu>
+            <li ng-repeat="choice in ctrl.list">
+              <a href ng-click="ctrl.goToState(choice.name)">{{choice.prettyName}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a class="navbar-brand" href="#"><img alt="NN" src="img/logo-mobile.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="btn-group dropdown" uib-dropdown>
+          <button id="single-button" type="button" class="navbar-menu" uib-dropdown-toggle ng-disabled="disabled">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="dropdown-menu" uib-dropdown-menu>
+            <li ng-repeat="choice in ctrl.list">
+              <a href ng-click="ctrl.goToState(choice.name)">{{choice.prettyName}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<hr>

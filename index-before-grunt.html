@@ -1,0 +1,87 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Průvodce maturitou smlouvy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="js/vendor/angularjs-slider/dist/rzslider.min.css"/>
+
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body ng-app="clientGuide" ng-strict-di>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+      <app-menu-navigation></app-menu-navigation>
+      <div class="container">
+        <ui-view>
+          <div class="text-center initial-loading">
+            <h2>Náhrávám stránku...</h2>
+          </div>
+        </ui-view>
+        <app-flow-navigation></app-flow-navigation>
+      </div>
+
+
+    </div> <!-- /container -->
+
+    <!-- Application Libraries -->
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/angular-ui-router.min.js"></script>
+    <script src="js/vendor/ui-bootstrap-2.3.2.min.js"></script>
+    <script src="js/vendor/angularjs-slider/dist/rzslider.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.8/angular-locale_cs-cz.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+    <script src="js/vendor/countUp.min.js"></script>
+    <script src="js/vendor/angular-countUp.min.js"></script>
+    <script src="js/vendor/angular-local-storage.min.js"></script>
+
+
+    <!-- Main application module -->
+    <script src="js/client-guide/client-guide.module.js"></script>
+
+    <!-- Routes -->
+    <script src="js/client-guide/client-guide.routes.js"></script>
+
+    <!-- App Navigation -->
+    <script src="js/client-guide/app-navigation/app-navigation.service.js"></script>
+    <script src="js/client-guide/app-navigation/app-flow-navigation.component.js"></script>
+    <script src="js/client-guide/app-navigation/app-flow-navigation-component.controller.js"></script>
+    <script src="js/client-guide/app-navigation/app-menu-navigation.component.js"></script>
+    <script src="js/client-guide/app-navigation/app-menu-navigation-component.controller.js"></script>
+
+    <!-- Pension Calculator Service -->
+    <script src="js/client-guide/pension-calculator.service.js"></script>
+
+    <!-- Time to Pension controller -->
+    <script src="js/client-guide/time-to-pension/time-to-pension.controller.js"></script>
+
+    <!-- Expected Pension controller -->
+    <script src="js/client-guide/expected-pension/expected-pension.controller.js"></script>
+
+    <!-- Maturing amount controller -->
+    <script src="js/client-guide/client-maturing-policy-amount/client-maturing-policy-amount.controller.js"></script>
+
+    <!-- Example of pension savigns controller -->
+    <script src="js/client-guide/example-of-pension-savings/example-of-pension-savings.controller.js"></script>
+
+    <!-- Client Setup -->
+    <script src="js/client-guide/client-setup/client-setup.service.js"></script>
+    <script src="js/client-guide/client-setup/client-setup.controller.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "nn-retence-min",
+  "homepage": "https://github.com/vitmistina/nn-retence-min",
+  "authors": [
+    "Vit Mistina <vit.mistina@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-css": "^3.3.6",
+    "angular": "1",
+    "modernizr": "^3.3.1",
+    "respond": "^1.4.2",
+    "angular-ui-router": "ui-router#^0.3.2",
+    "angular-i18n": "^1.6.1",
+    "chart.js": "^2.4.0",
+    "countUp.js": "^1.8.1",
+    "angular-local-storage": "^0.5.2",
+    "jquery": "^3.1.1",
+    "angularjs-slider": "^6.0.0",
+    "angular-chart.js": "^1.1.1"
+  }
+}
