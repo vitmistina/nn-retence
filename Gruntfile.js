@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           },
           {
             expand: true,
-            src: 'js/client-guide/**/*',
+            src: 'js/client-guide/**/*.html',
             dest: 'dist/'
           },
           {
