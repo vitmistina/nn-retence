@@ -4,13 +4,21 @@
    Author's custom styles
    ========================================================================== */
 
-@font-face {
-   font-family: "NN-Dagny-Display";
-   src: url("../fonts/NNDagnyDisplayWebPro.eot");
-   src: url("../fonts/NNDagnyDisplayWebPro.woff") format("woff");
-   font-weight: normal;
-   font-style: normal;
+ @font-face {
+ font-family:"NN-Dagny-Display";
+ src: url("../fonts/NNDagnyDisplayWebPro.eot");
+ src: url("../fonts/NNDagnyDisplayWebPro.woff") format("woff");
+ font-weight: normal;
+ font-style: normal;
  }
+
+@font-face {
+font-family:"NN-Dagny-Display";
+src: url("../fonts/NNDagnyDisplayWebPro.eot");
+src: url("../fonts/NNDagnyDisplayWebPro.woff") format("woff");
+font-weight: normal;
+font-style: normal;
+}
 
 @font-face {
 font-family: "NN-Dagny-Text";
@@ -48,6 +56,12 @@ h1, h2, .pension dl dd, h3, h4, h5, h6 {
 }
 .dark {
     color: #e64415;
+}
+.medium-grey {
+  color: #999;
+}
+.extra-dark-grey {
+  color:#414141;
 }
 
 .nn-age-input,input[name="averageMonthlyIncome"] {
@@ -229,7 +243,7 @@ label.form-label {
 
 .info-box {
   margin-top: 31px;
-  border:2px solid #ea650d;
+  border:4px solid #e5ded9;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   font-size:200%;
@@ -240,11 +254,15 @@ label.form-label {
   margin: 20px 20px;
 }
 
+.info-box img {
+  margin-top:20px;
+}
+
 .big-number {
   font-size:160%;
 }
 
-.info-source {
+.info-box .info-source {
   font-size:50%;
   color: #414141;
 }
@@ -253,12 +271,8 @@ img {
   max-width:100%;
 }
 
-.investment-options div {
+.investment-options div,.work-with-investment-risk div {
   padding-top:31px;
-}
-
-.work-with-investment-risk div {
-  padding-top: 31px;
 }
 
 .work-with-investment-risk h2 {
@@ -293,8 +307,8 @@ h2[count-up] {
   top:16px;
   background-image: url('../img/unchecked.png');
   background-size:cover;
-  height: 59px;
-  width: 54px;
+  height: 40px;
+  width: 40px;
   display:inline-block;
   padding: 0 0 0 0px;
 }
@@ -302,8 +316,8 @@ h2[count-up] {
 {
   background-image: url('../img/checked.png');
   background-size:cover;
-  height: 59px;
-  width: 54px;
+  height: 40px;
+  width: 40px;
   display:inline-block;
   padding: 0 0 0 0px;
 }

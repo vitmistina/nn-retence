@@ -81,6 +81,9 @@ module.exports = function(grunt) {
     },
     cssmin: {
       build: {
+        options: {
+          keepSpecialComments: 0
+        },
         files: {
           'dist/css/app.css': ['dist/css/app.css']
         }
