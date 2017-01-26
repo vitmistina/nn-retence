@@ -8,7 +8,7 @@ GuideController.$inject = ['$state'];
 
 function GuideController($state) {
   var ctrl = this;
-  if (document.referrer.search("//www.nnporadce.cz") == -1)
+  if (document.referrer.search("//www.nnporadce.cz") == -1 && document.URL.search("localhost:3000") == -1)
   {
     $state.go("restricted-access");
   }

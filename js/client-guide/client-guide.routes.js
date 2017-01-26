@@ -83,7 +83,7 @@ function routeConfig ($stateProvider,$urlRouterProvider,localStorageServiceProvi
     })
     .state('restricted-access',{
       url: '/restricted-access',
-      template: '<h2>Prosím proklikněte se přes www.nnporadce.cz</h2>'
+      template: '<h2>Prosím proklikněte se přes <a href="//www.nnporadce.cz">www.nnporadce.cz</a></h2>'
     });
 
   $urlRouterProvider.otherwise('/guide/client-setup');
