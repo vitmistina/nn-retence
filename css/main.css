@@ -326,6 +326,9 @@ h2[count-up] {
 }
 
 @media (max-width: 768px) {
+      .tablet-and-desktop-only {
+        display:none;
+      }
       .col-sm-6.text-right, .col-sm-6.text-left {
               text-align: center;
        }
