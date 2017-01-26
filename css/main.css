@@ -321,7 +321,9 @@ h2[count-up] {
   display:inline-block;
   padding: 0 0 0 0px;
 }
-
+.dropdown-menu>li>a {
+  padding: 8px 20px !important;
+}
 
 @media (max-width: 768px) {
       .col-sm-6.text-right, .col-sm-6.text-left {

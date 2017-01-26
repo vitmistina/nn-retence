@@ -13,52 +13,52 @@ function AppNavigationService() {
     //   prettyName: 'Dárek pro klienty'
     // },
     {
-      name: 'client-setup',
+      name: 'guide.client-setup',
       prettyName: 'Nastavení klienta'
     },
     {
-      name: 'time-to-pension',
-      prettyName: 'Doba do důchodu'
+      name: 'guide.time-to-pension',
+      prettyName: 'Za jak dlouho půjdete do důchodu?'
     },
     {
-      name: 'expected-pension',
-      prettyName: 'Očekávaná výše penze'
+      name: 'guide.expected-pension',
+      prettyName: 'Kolik budete mít v důchodu?'
     },
     {
-      name: 'example-of-pension-savings',
-      prettyName: 'Příklad spoření na penzi'
+      name: 'guide.example-of-pension-savings',
+      prettyName: 'Můžete si polepšit...'
     },
     {
-      name: 'investment-options',
-      prettyName: 'Možnosti investic'
+      name: 'guide.investment-options',
+      prettyName: 'Jak můžete naložit se svými penězi?'
     },
     {
-      name: 'you-know-unit-trusts',
-      prettyName: 'Podílové fondy'
+      name: 'guide.you-know-unit-trusts',
+      prettyName: 'Podílové fondy už přeci znáte!'
     },
     {
-      name: 'work-with-investment-risk',
-      prettyName: 'Pracujte s investičním rizikem'
+      name: 'guide.work-with-investment-risk',
+      prettyName: 'Nebojme se rizika, lze s ním pracovat'
     },
     {
-      name: 'lets-invest',
-      prettyName: 'Pojďte investovat'
+      name: 'guide.lets-invest',
+      prettyName: 'Je dobré peníze zhodnocovat?'
     },
     {
-      name: 'client-maturing-policy-amount',
-      prettyName: 'Kolik vám nesu'
+      name: 'guide.client-maturing-policy-amount',
+      prettyName: 'Kolik vám nesu z vaší smlouvy?'
     },
     {
-      name: 'life-risk-insurance-status',
-      prettyName: 'Končí krytí rizik'
+      name: 'guide.life-risk-insurance-status',
+      prettyName: 'S končící smlouvou vám končí i pojistná ochrana'
     },
     {
-      name: 'life-insurance',
-      prettyName: 'Myslete na sebe a svou rodinu'
+      name: 'guide.life-insurance',
+      prettyName: 'Nesu vám ještě 1 500 000 Kč navíc'
     },
     {
-      name: 'next-steps',
-      prettyName: 'Další kroky'
+      name: 'guide.next-steps',
+      prettyName: 'Co navrhujeme jako další kroky?'
     },
   ];
 
