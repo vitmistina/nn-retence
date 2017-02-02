@@ -3,15 +3,15 @@
 </div>
 
 <div class="col-md-9">
-  <h2>... jako například Radim (64).</h2>
+  <h2>... jako například {{ ctrl.genderName }} (64).</h2>
 
-  <p>Panu Radimovi před odchodem do důchodu dožila smlouva životního pojištění konce pojistné doby s výplatou 300 000 Kč.</p>
+  <p><span ng-if="ctrl.genderName == 'Radim'">Panu Radimovi</span><span ng-if="ctrl.genderName == 'Jana'">Paní Janě</span> před odchodem do důchodu skončila pojistná doba u smlouvy s výplatou {{ ctrl.expectedInvestment | currency:"Kč":0 }}.</p>
 
-  <p>Svoje peníze se stejně jako většina jiných klientů rozhodl reinvestovat do podílových fondů a rozhodl se nechat si tyto prostředky vyplácet formou 5letého důchodu.</p>
+  <p>Svoje peníze se rozhodl<span ng-if="ctrl.genderName == 'Jana'">a</span> reinvestovat do podílových fondů a rozhodl<span ng-if="ctrl.genderName == 'Jana'">a</span> se nechat si výnosy vyplácet formou 5letého důchodu.</p>
 
-  <p>Za tyto prostředky nakoupil podílové jednotky vybraného fondu, které postupně odprodává. Zakoupené podílové jednotky mohou zhodnocovat a zároveň podléhají investičnímu riziku a mohou i ztratit na hodnotě. Více informací o produktu v brožuře Zhodnocujte svůj majetek a zároveň si nechte vyplácet pravidelnou rentu.</p>
+  <p>Za tyto prostředky nakoupil<span ng-if="ctrl.genderName == 'Jana'">a</span> podílové jednotky vybraného fondu, které postupně odprodává. Zakoupené podílové jednotky mohou zhodnocovat, ale zároveň podléhají investičnímu riziku a mohou i ztratit na hodnotě. Více informací o produktu v brožuře Zhodnocujte svůj majetek a zároveň si nechte vyplácet pravidelnou rentu.</p>
 
-  <p><strong>Díky tomu nebude mít prvních pět let tak velký pokles příjmů v porovnání s jeho platem.</strong></p>
+  <p><strong>Díky tomu nebude mít {{ ctrl.genderName }} prvních pět let tak velký pokles příjmů v porovnání s <span ng-if="ctrl.genderName == 'Radim'">jeho</span><span ng-if="ctrl.genderName == 'Jana'">jejím</span> platem.</strong></p>
   <canvas class="chart chart-bar" chart-data="ctrl.bar.data" chart-labels="ctrl.bar.labels"
     chart-series="ctrl.bar.series" chart-options="ctrl.bar.options" chart-colors="ctrl.bar.colors"></canvas>
   <p><i>Orientační výpočet navýšeného příjmu dle informační brožury Zhodnocujte svůj majetek a zároveň si nechte vyplácet pravidelnou rentu.</i></p>

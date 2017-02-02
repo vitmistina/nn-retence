@@ -11,7 +11,20 @@ function pensionCalculatorService() {
   var currentYear = new Date().getFullYear();
   var currentMonth = new Date().getMonth();
 
+  service.averageMonthlyIncome = 25000;
+  service.afterTaxIncome = 19295;
+  service.estimatedPension = 11966;
+  service.genderName = "Radim";
 
+
+
+  service.setGender = function (genderName) {
+    if (genderName === "man") {
+      service.genderName = "Radim";
+    } else {
+      service.genderName = "Jana";
+    }
+  };
 
   service.getEstimatedYearOfRetirement = function (yearOfBirth,monthOfBirth,gender) {
     var lookupTable = service.loadRetirementAgeTableObject();
@@ -40,6 +53,63 @@ function pensionCalculatorService() {
     return timeUntilRetirementObject;
   };
 
+  service.calculateExpectedPension = function (averageMonthlyIncome,yearsOfInsurance) {
+    var output = {
+      estimatedPension:null,
+      incomeLoweredBy:null
+    };
+    var incomeTiers = {
+      fullTier: null,
+      reducedTier: null
+    };
+    var afterTaxIncomeLookupTableObject = {
+      10000: 8900,
+      15000: 12405,
+      20000: 15850,
+      25000: 19295,
+      30000: 22740,
+      35000: 26185,
+      40000: 29630,
+      45000: 33075,
+      50000: 39707,
+      55000: 43152,
+      60000: 46597
+    };
+    if (averageMonthlyIncome <= 12423) {
+      incomeTiers.fullTier = averageMonthlyIncome;
+    } else if (averageMonthlyIncome <= 112928) {
+      incomeTiers.fullTier = 12423;
+      incomeTiers.reducedTier = averageMonthlyIncome - 12423;
+    }
+    output.estimatedPension = 2550+(incomeTiers.fullTier+incomeTiers.reducedTier*0.26)*0.015*yearsOfInsurance;
+    output.incomeLoweredBy = 100 - 100 * output.estimatedPension / (afterTaxIncomeLookupTableObject[averageMonthlyIncome]);
+    service.averageMonthlyIncome = averageMonthlyIncome;
+    service.afterTaxIncome = afterTaxIncomeLookupTableObject[averageMonthlyIncome];
+    service.estimatedPension = output.estimatedPension;
+    return output;
+  };
+
+  service.estimateExpectedInvestment = function (averageMonthlyIncome) {
+    return 150000 + (averageMonthlyIncome-10000)*10;
+  };
+
+
+  service.convertInvestmentTo5YearIncome = function (expectedInvestment) {
+    var investmentTo5YearIncomeLookupTableObject = {
+      150000:(1700+3500)/2,
+      200000:3500,
+      250000:(3500+5200)/2,
+      300000:5200,
+      350000:(5200+7000)/2,
+      400000:7000,
+      450000:(7000+8700)/2,
+      500000:8700,
+      550000:(8700+10500)/2,
+      600000:10500,
+      650000:(10500+12200)/2,
+    };
+    return investmentTo5YearIncomeLookupTableObject[expectedInvestment];
+  };
 
 
   service.decodeMonths = function (monthInt) {

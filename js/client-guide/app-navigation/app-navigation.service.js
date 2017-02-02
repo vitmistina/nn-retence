@@ -18,11 +18,11 @@ function AppNavigationService() {
     },
     {
       name: 'guide.time-to-pension',
-      prettyName: 'Za jak dlouho půjdete do důchodu?'
+      prettyName: 'Kdy chcete jít do důchodu?'
     },
     {
       name: 'guide.expected-pension',
-      prettyName: 'Kolik budete mít v důchodu?'
+      prettyName: 'Jak vysoký budete mít důchod?'
     },
     {
       name: 'guide.example-of-pension-savings',

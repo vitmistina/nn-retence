@@ -59,20 +59,22 @@ function TimeToPensionController(pensionCalculatorService) {
   $ctrl.update = function () {
     $ctrl.estimatedYearOfRetirement = pensionCalculatorService.getEstimatedYearOfRetirement($ctrl.yearOfBirth,$ctrl.monthOfBirth,$ctrl.gender);
     $ctrl.timeUntilRetirement = pensionCalculatorService.getTimeUntilRetirement($ctrl.yearOfBirth,$ctrl.monthOfBirth,$ctrl.gender);
+    pensionCalculatorService.setGender($ctrl.gender);
+
   };
 
   $ctrl.update();
 
-  $ctrl.setGender = function (genderName) {
-
-    $ctrl.gender = genderName;
-    $ctrl.update();
-  };
-
-  $ctrl.setGender = function (monthInt) {
-    $ctrl.monthOfBirth = monthInt;
-    $ctrl.update();
-  };
+  // $ctrl.setGender = function (genderName) {
+  //
+  //   $ctrl.gender = genderName;
+  //   $ctrl.update();
+  // };
+  //
+  // $ctrl.setGender = function (monthInt) {
+  //   $ctrl.monthOfBirth = monthInt;
+  //   $ctrl.update();
+  // };
 
 
 

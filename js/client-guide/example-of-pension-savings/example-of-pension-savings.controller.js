@@ -4,20 +4,22 @@
 angular.module('clientGuide')
 .controller('ExampleOfPensionSavingsController',ExampleOfPensionSavingsController);
 
-ExampleOfPensionSavingsController.$inject = [];
+ExampleOfPensionSavingsController.$inject = ['pensionCalculatorService'];
 
-function ExampleOfPensionSavingsController() {
+function ExampleOfPensionSavingsController(pensionCalculatorService) {
   var ctrl = this;
 
+  ctrl.expectedInvestment = pensionCalculatorService.estimateExpectedInvestment(pensionCalculatorService.averageMonthlyIncome);
+  ctrl.genderName = pensionCalculatorService.genderName;
 
 
   ctrl.bar = {
     labels: ['Před důchodem','Starobní důchod','S investicí'],
     series: ['Čistá mzda před důchodem','Starobní důchod','Výplata naspořených prostředků'],
     data: [
-            [19295,0,0],
-            [0,12385,12385],
-            [0,0,5200]
+            [pensionCalculatorService.afterTaxIncome,0,0],
+            [0,pensionCalculatorService.estimatedPension,pensionCalculatorService.estimatedPension],
+            [0,0,pensionCalculatorService.convertInvestmentTo5YearIncome(ctrl.expectedInvestment)]
 
           ],
     colors: [
