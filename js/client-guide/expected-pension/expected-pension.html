@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-  <h1 class=""><span class="light">Kolik</span> <span class="medium">budete</span> <span class="dark">mít</span> <span class="medium">v</span> <span class="light">důchodu?</span></h1>
+  <h1 class=""><span class="light">Jak</span> <span class="medium">vysoký</span> <span class="dark">budete</span> <span class="medium">mít</span> <span class="light">důchod?</span></h1>
 </div>
 <div class="col-sm-12 extra-light-grey-bg form-padding expected-pension-form">
   <div class="clearfix form-line">
@@ -13,8 +13,8 @@
       min="10000"
       ng-min="10000"
       value="15000"
-      max="45000"
-      ng-max="45000"
+      max="60000"
+      ng-max="60000"
       step="5000"
       size="5"
       maxlength="5"
@@ -58,12 +58,12 @@
 
 </div>
 
-<div class="col-sm-12 age-calculation-results" ng-if="ctrl.estimatedPension">
+<div class="col-sm-12 age-calculation-results" ng-if="ctrl.output.estimatedPension">
   <div class="col-sm-6 text-center">
-    Důchod budete mít zhruba<br><span class="dark age-calculation-result">{{ ctrl.estimatedPension | currency:"Kč":0 }}</span>
+    Důchod budete mít zhruba<br><span class="dark age-calculation-result">{{ ctrl.output.estimatedPension | currency:"Kč":0 }}</span>
   </div>
   <div class="col-sm-6 text-center">
-    Čistý příjem vám klesne o<br><span class="dark age-calculation-result">{{ ctrl.incomeLoweredBy | number:1 }} %</span>
+    Čistý příjem vám klesne o<br><span class="dark age-calculation-result">{{ ctrl.output.incomeLoweredBy | number:1 }} %</span>
   </div>
 </div>
 
