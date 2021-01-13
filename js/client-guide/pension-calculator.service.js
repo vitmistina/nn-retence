@@ -121,25 +121,12 @@
     };
 
     service.estimateExpectedInvestment = function (averageMonthlyIncome) {
-      return 150000 + (averageMonthlyIncome - 10000) * 10;
+      var discountedIncome = Math.max(averageMonthlyIncome - 20000, 0);
+      return 150000 + Math.pow(discountedIncome * 10, 1.07);
     };
 
     service.convertInvestmentTo5YearIncome = function (expectedInvestment) {
-      //TODO calculate for up to 1 000 000
-      var investmentTo5YearIncomeLookupTableObject = {
-        150000: (1700 + 3500) / 2,
-        200000: 3500,
-        250000: (3500 + 5200) / 2,
-        300000: 5200,
-        350000: (5200 + 7000) / 2,
-        400000: 7000,
-        450000: (7000 + 8700) / 2,
-        500000: 8700,
-        550000: (8700 + 10500) / 2,
-        600000: 10500,
-        650000: (10500 + 12200) / 2,
-      };
-      return investmentTo5YearIncomeLookupTableObject[expectedInvestment];
+      return expectedInvestment * 0.0175;
     };
 
     service.decodeMonths = function (monthInt) {
