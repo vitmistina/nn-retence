@@ -14,8 +14,8 @@ module.exports = function (grunt) {
       },
       build: {
         dest: {
-          js: "dist/js/app.js",
-          css: "dist/css/app.css",
+          js: "docs/js/app.js",
+          css: "docs/css/app.css",
         },
         mainFiles: {
           "angular-i18n": "angular-locale_cs-cz.js",
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
     },
     clean: {
       build: {
-        src: ["dist"],
+        src: ["docs"],
       },
     },
     copy: {
@@ -38,22 +38,22 @@ module.exports = function (grunt) {
           {
             expand: true,
             src: "index.html",
-            dest: "dist/",
+            dest: "docs/",
           },
           {
             expand: true,
             src: "js/client-guide/**/*.html",
-            dest: "dist/",
+            dest: "docs/",
           },
           {
             expand: true,
             src: "fonts/*",
-            dest: "dist/",
+            dest: "docs/",
           },
           {
             expand: true,
             src: "img/favicon.ico",
-            dest: "dist/",
+            dest: "docs/",
           },
         ],
       },
@@ -64,21 +64,21 @@ module.exports = function (grunt) {
       },
       js: {
         src: [
-          "dist/js/app.js",
+          "docs/js/app.js",
           "js/client-guide/**/*.module.js",
           "js/client-guide/**/*.js",
         ],
-        dest: "dist/js/app.js",
+        dest: "docs/js/app.js",
       },
       css: {
-        src: ["dist/css/app.css", "css/main.css"],
-        dest: "dist/css/app.css",
+        src: ["docs/css/app.css", "css/main.css"],
+        dest: "docs/css/app.css",
       },
     },
     uglify: {
       build: {
         files: {
-          "dist/js/app.js": ["dist/js/app.js"],
+          "docs/js/app.js": ["docs/js/app.js"],
         },
       },
     },
@@ -88,7 +88,7 @@ module.exports = function (grunt) {
           keepSpecialComments: 0,
         },
         files: {
-          "dist/css/app.css": ["dist/css/app.css"],
+          "docs/css/app.css": ["docs/css/app.css"],
         },
       },
     },
@@ -101,7 +101,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             src: ["img/**/*.{png,jpg,gif}"],
-            dest: "dist/",
+            dest: "docs/",
           },
         ],
       },
