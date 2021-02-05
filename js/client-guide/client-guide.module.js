@@ -9,6 +9,6 @@
     "LocalStorageModule",
     "rzModule",
     "chart.js",
-    "ngCountup",
+    "countUpModule",
   ]);
 })();
