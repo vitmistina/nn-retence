@@ -1,7 +1,4 @@
 <h1><span class="light">Kolik vám</span> <span class="medium">nesu z</span> <span class="dark">vaší smlouvy?</span></h1>
-<h2 class="extra-dark-grey"
-    count-up
-    end-val="ctrl.client.savedAmount"
-    duration="5"
-    options="{useEasing : true,useGrouping : true,separator : ' ',decimal : '.',prefix : '',suffix : ' Kč'}">
+<h2 class="extra-dark-grey">
+    {{ ctrl.client.savedAmount }}
 </h2>

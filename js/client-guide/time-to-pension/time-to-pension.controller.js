@@ -42,7 +42,7 @@
     $ctrl.slider = {
       options: {
         floor: 1951,
-        ceil: 2000,
+        ceil: new Date().getFullYear(),
         hideLimitLabels: true,
         hidePointerLabels: true,
         enforceRange: false,

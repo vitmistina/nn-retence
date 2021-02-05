@@ -1,17 +1,18 @@
 (function () {
-'use strict';
+  "use strict";
 
-angular.module('clientGuide')
-.controller('ClientMaturingPolicyAmountController',ClientMaturingPolicyAmountController);
+  angular
+    .module("clientGuide")
+    .controller(
+      "ClientMaturingPolicyAmountController",
+      ClientMaturingPolicyAmountController
+    );
 
-ClientMaturingPolicyAmountController.$inject = ['ClientSetupService'];
+  ClientMaturingPolicyAmountController.$inject = ["ClientSetupService"];
 
-function ClientMaturingPolicyAmountController(ClientSetupService) {
-  var ctrl = this;
+  function ClientMaturingPolicyAmountController(ClientSetupService) {
+    var ctrl = this;
 
-  ctrl.client = ClientSetupService.getClientData();
-
-  
-}
-
+    ctrl.client = ClientSetupService.getClientData();
+  }
 })();
